@@ -18,8 +18,8 @@ public class Rain extends Inhuman implements Action{
 		return this.Season;
 	}
 	@Override
-	public void Action() {
-		System.out.println(this.getSeason()+ " " + this.getName() +  " rustled");
+	public void Action(String action) {
+		System.out.println(this.getSeason()+ " " + this.getName() + " " + action);
 	}
 	@Override
     public String toString() {
@@ -29,7 +29,7 @@ public class Rain extends Inhuman implements Action{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Hemul)) return false;
+        if (!(o instanceof Rain)) return false;
         Rain rain = (Rain) o;
         return Objects.equals(this.getName(), rain.getName()) &&
                 Objects.equals(this.getSeason(), rain.getSeason());

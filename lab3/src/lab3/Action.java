@@ -1,5 +1,5 @@
 package lab3;
 
 public interface Action {
-	void Action();
+	void Action(String action);
 }
