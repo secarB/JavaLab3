@@ -9,15 +9,6 @@ public class Hemul extends Person implements Move, SpecialActionwReason, Action{
 		this.setStatus(status);
 	}
 	@Override
-    public void Action(String action) {
-		System.out.println(this.getName() + " " + action);
-	}
-	@Override
-	public void Move(Location location) {
-		this.setLocation(location);
-		System.out.println(this.getName() + " went to " + location.toString());
-	}
-	@Override
 	public void SpecialActionwReason(String Reason, Location location) {
 		if (this.getStatus() != Status.AWAKE)
 		{
@@ -29,6 +20,17 @@ public class Hemul extends Person implements Move, SpecialActionwReason, Action{
 			System.out.println (this.getName()+ " "  + this.getStatus().toString());
 		}
 	}	
+	@Override
+	public void Move(Location location) {
+		this.setLocation(location);
+		System.out.println(this.getName() + " went to " + location.toString());
+	}
+
+	@Override
+    public void Action(String action) {
+		System.out.println(this.getName() + " " + action);
+	}
+	
 	
 	@Override
     public String toString() {

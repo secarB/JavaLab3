@@ -9,16 +9,6 @@ public class Moomintroll  extends Person implements Move,Action, SpecialAction{
 		this.setLocation(location);
 		this.setStatus(status);
 	}
-	
-	@Override
-    public void Action(String action) {
-		System.out.println(this.getName() + " " + action);
-	}
-	@Override
-	public void Move(Location location) {
-		this.setLocation(location);
-		System.out.println(this.getName() + " went to " + location.toString());
-	}
 	@Override
 	public void SpecialAction(Location location) {
 		if (this.getStatus() != Status.SLEEPING) {
@@ -29,6 +19,17 @@ public class Moomintroll  extends Person implements Move,Action, SpecialAction{
 			System.out.println (this.getName()+ " "  + this.getStatus().toString());
 		}
 	}
+	@Override
+	public void Move(Location location) {
+		this.setLocation(location);
+		System.out.println(this.getName() + " went to " + location.toString());
+	}
+	
+	@Override
+    public void Action(String action) {
+		System.out.println(this.getName() + " " + action);
+	}
+	
 	@Override
     public String toString() {
         return "Name: " + this.getName()  + "location: " + this.getLocation()+ "status: " + this.getStatus();
