@@ -22,11 +22,13 @@ public class Moomintroll  extends Person implements Move,Action, SpecialAction{
 	@Override
 	public void Move(Location location) {
 		this.setLocation(location);
+		this.setStatus(Status.AWAKE);
 		System.out.println(this.getName() + " went to " + location.toString());
 	}
 	
 	@Override
     public void Action(String action) {
+		this.setStatus(Status.AWAKE);
 		System.out.println(this.getName() + " " + action);
 	}
 	

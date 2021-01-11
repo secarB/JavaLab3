@@ -23,11 +23,13 @@ public class Hemul extends Person implements Move, SpecialActionwReason, Action{
 	@Override
 	public void Move(Location location) {
 		this.setLocation(location);
+		this.setStatus(Status.AWAKE);
 		System.out.println(this.getName() + " went to " + location.toString());
 	}
 
 	@Override
     public void Action(String action) {
+		this.setStatus(Status.AWAKE);
 		System.out.println(this.getName() + " " + action);
 	}
 	
