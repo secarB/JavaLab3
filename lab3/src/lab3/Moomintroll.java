@@ -21,8 +21,10 @@ public class Moomintroll  extends Person implements Move,Action, SpecialAction{
 	}
 	@Override
 	public void SpecialAction(Location location) {
-		this.setStatus(Status.AWAKE);
-		System.out.println (this.getName()+ "turned out the lamp and fell asleep " + location.toString());
+		if (this.getStatus() != Status.SLEEPING) {
+			this.setStatus(Status.SLEEPING);
+			System.out.println (this.getName()+ "turned out the lamp and fell asleep " + location.toString());
+		}
 	}
 	@Override
     public String toString() {
