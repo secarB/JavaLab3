@@ -24,6 +24,9 @@ public class Moomintroll  extends Person implements Move,Action, SpecialAction{
 		if (this.getStatus() != Status.SLEEPING) {
 			this.setStatus(Status.SLEEPING);
 			System.out.println (this.getName()+ "turned out the lamp and fell asleep " + location.toString());
+		} else 
+		{
+			System.out.println (this.getName()+ " "  + this.getStatus().toString());
 		}
 	}
 	@Override

@@ -24,6 +24,10 @@ public class Hemul extends Person implements Move, SpecialActionwReason, Action{
 			this.setStatus(Status.AWAKE);
 			System.out.println(this.getName() + " woke up" +  " because " + "his " + location.toString() + " " + Reason);
 		}
+		else 
+		{
+			System.out.println (this.getName()+ " "  + this.getStatus().toString());
+		}
 	}	
 	
 	@Override

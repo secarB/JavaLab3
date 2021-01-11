@@ -3,6 +3,7 @@ package lab3;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		Hemul hemul = new Hemul("Hemul",Location.UNKNOW,Status.UNKNOW);
 		Moomintroll moomintroll = new Moomintroll("Moomintroll",Location.UNKNOW,Status.UNKNOW);
 		moomintroll.Move(Location.HOLE);
